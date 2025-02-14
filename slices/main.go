@@ -16,7 +16,7 @@ func ModifySlice(slice []string) []string{
 		return slice
 	}
 	slice[1] = "elephant"
-	
+	return slice
 }
 
 func PopSliceValue(slice []string) []string{
