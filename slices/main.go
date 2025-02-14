@@ -6,19 +6,19 @@ import (
 
 // We will be modifying this later
 func CreateSlice() []int{
-	slice:= []int{1, 2, 3, 4, 5}
-	return slice
+	slice1:= []int{1, 2, 3, 4, 5}
+	return slice1
 }
 
 func ModifySlice() []int{
-	slice:= []int{1, 2, 3, 4, 5}
-	slice= append(slice, 6)
-	return slice
+	slice2:= []int{1, 2, 3, 4, 5}
+	slice2= append(slice2, 6)
+	return slice2
 }
 
 func PopSliceValue() int{
-	slice:= []int{1, 2, 3, 4, 5}
-	return slice[0]
+	slice3:= []int{1, 2, 3, 4, 5}
+	return slice3[0]
 }
 
 // Where we will run our code
