@@ -20,7 +20,7 @@ func ModifySlice(slice []string) []string{
 }
 
 func PopSliceValue(slice []string) []string{
-	slice= slices.Delete(slice, 2,4)
+	slice= slices.Delete(slice, 2,3)
 	return slice
 
 }
