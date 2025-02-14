@@ -8,7 +8,7 @@ func VariableDeclaration() string {
 }
 
 func StringConcatenation(firstArg string, secondArg string) string {
-	return firstArg +" "+ secondArg
+	return firstArg + secondArg
 }
 
 func IncrementInt(count int) int{
