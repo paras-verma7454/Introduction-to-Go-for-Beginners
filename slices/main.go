@@ -10,10 +10,10 @@ func CreateSlice() []int{
 	return slice1
 }
 
-func ModifySlice() []int{
+func ModifySlice() int{
 	slice2:= []int{1, 2, 3, 4, 5}
 	slice2= append(slice2, 6)
-	return slice2
+	return slice2[5]
 }
 
 func PopSliceValue() int{
