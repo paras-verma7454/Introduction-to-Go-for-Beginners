@@ -22,14 +22,14 @@ type Speaker interface {
 }
 
 func (p Person) Speak() string {
-    return fmt.Sprintf("Hi! My name is %s.\n", p.Name)
+    return fmt.Sprintf("Hi! My name is %s.", p.Name)
 }
 func (p Person) Scramble(int) int {
 	return 10
 }
 
 func (r Robot) Speak() string {
-    return fmt.Sprintf("Hello, I am robot model %s.\n", r.Model)
+    return fmt.Sprintf("Hello, I am robot model %s.", r.Model)
 }
 
 func (a Animal) Speak() []byte {
