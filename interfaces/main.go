@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // We will be modifying this later
 type Person struct {
@@ -20,18 +22,18 @@ type Speaker interface {
 }
 
 func (p Person) Speak() string {
-    return fmt.Sprintf("Hi! my name is %s\n", p.Name)
+    return fmt.Sprintf("Hi! my name is %s.\n", p.Name)
 }
 func (p Person) Scramble(int) int {
 	return 10
 }
 
 func (r Robot) Speak() string {
-    return fmt.Sprintf("Hello, I am robot model %s\n", r.Model)
+    return fmt.Sprintf("Hello, I am robot model %s.\n", r.Model)
 }
 
-func (a Animal) Speak() string {
-    return fmt.Sprintf("This is how animal %s speaks", a.Name)
+func (a Animal) Speak() []byte {
+    return []byte(a.Name)
 }
 
 func introduce(s Speaker) {
@@ -57,8 +59,5 @@ func main() {
     speaker = robot
     fmt.Println(speaker.Speak())
     animal := Animal{Name: "Lion"}
-    speakers := []Speaker{person, robot, animal}
-    for _, s := range speakers {
-        introduce(s)
-    }
+    fmt.Println("Animal",animal.Speak())
 }
