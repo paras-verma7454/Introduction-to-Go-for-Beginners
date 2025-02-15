@@ -28,7 +28,7 @@ func main() {
 		Age: 25,
 		Employed: false,
 	}
-	fmt.Println(Person1,"Jane")
+	fmt.Println(UpdateNameByValue(Person1,"Jane"))
 	UpdateNameByReference(&Person1, "Jony")
 	MakePersonEmployed(&Person1)
 
