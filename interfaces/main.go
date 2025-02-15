@@ -20,14 +20,14 @@ type Speaker interface {
 }
 
 func (p Person) Speak() string {
-    return fmt.Sprintf("Hi, my name is %s\n", p.Name)
+    return fmt.Sprintf("Hi! my name is %s\n", p.Name)
 }
 func (p Person) Scramble(int) int {
 	return 10
 }
 
 func (r Robot) Speak() string {
-    return fmt.Sprintf("Hi, I'm a Robot model %s\n", r.Model)
+    return fmt.Sprintf("Hello, I am robot model %s\n", r.Model)
 }
 
 func (a Animal) Speak() string {
@@ -40,22 +40,22 @@ func introduce(s Speaker) {
 
 // Where we will run our code
 func main() {
-    person := Person{Name: "Mike"}
-    robot := Robot{Model: "T-1000"}
+    person := Person{Name: "Alice"}
+    robot := Robot{Model: "RX-78"}
 
-    // personSpoke:=person.Speak()
-    // robotSpoke:=robot.Speak()
+    personSpoke:=person.Speak()
+    robotSpoke:=robot.Speak()
 
-    // fmt.Println(personSpoke)
-    // fmt.Println(robotSpoke)
+    fmt.Println(personSpoke)
+    fmt.Println(robotSpoke)
 
-    // introduce(person)
-    // introduce(robot)
+    introduce(person)
+    introduce(robot)
     var speaker Speaker
     speaker = person
     fmt.Println("Person",speaker.Speak())
     speaker = robot
-    // fmt.Println(speaker.Speak())
+    fmt.Println(speaker.Speak())
     animal := Animal{Name: "Lion"}
     speakers := []Speaker{person, robot, animal}
     for _, s := range speakers {
