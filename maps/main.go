@@ -5,33 +5,26 @@ import (
 )
 
 // We will be modifying this later
-func CreateMap() map[string]string {
-	color := map[string]string{
-		"red":   "#ff0000",
-		"green": "#4bf745",
-		"white": "#ffffff",
+func CreateMap(key1, key2, val1,val2 string) map[string]string{
+	return map[string]string{
+		key1: val1,
+		key2: val2,
 	}
+}
+
+func AddToMap(color map[string]int,newKey string,newValue int ) map[string]int{
+	color[newKey] = newValue
 	return color
 }
 
-func AddToMap(colors map[string]string) map[string]string{
-	colors["blue"] = "#0000ff"
-	return colors
-}
-
-func DeleteFromMap(colors map[string]string) map[string]string{
-	delete(colors, "blue")
-	return colors
+func DeleteFromMap(color map[string]int) map[string]int{
+	delete(color,"red")
+	return color
 }
 
 // Where we will run our code
 func main() {
-	colors := map[string]string{
-		"red":   "#ff0000",
-		"green": "#4bf745",
-		"white": "#ffffff",
-	}
-	fmt.Println(CreateMap())
-	fmt.Println(AddToMap(colors))
-	fmt.Println(DeleteFromMap(colors))
+	fmt.Println(CreateMap("First", "Last", "Jon", "Doe"))
+	fmt.Println(AddToMap(map[string]int{"red": 1, "blue": 2, "green": 3},"yellow",4))
+	fmt.Println(DeleteFromMap(map[string]int{"red": 1, "blue": 2, "green": 3}))
 }
