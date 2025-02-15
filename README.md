@@ -7,7 +7,7 @@
 In Chapter 1, we begin with a foundational overview of Go. First, you'll learn about Go’s unique history, including its focus on simplicity, efficiency, and readability, which makes it a popular choice for modern software development.
 
 We'll then introduce the basic structure of a Go program, covering essential concepts such as packages, imports, and main functions:
-```
+```go
 package main
 
 import "fmt"
@@ -20,7 +20,7 @@ This code snippet demonstrates a simple Go program that prints 'Hello, Go!' to t
 
 You'll also learn how to declare and initialize variables, a key part of working with Go:
 
-```
+```go
 var name string = "Go Programming"
 var version = 1.24
 ```
@@ -33,13 +33,13 @@ By the end of this chapter, you'll be comfortable with writing simple Go functio
 Chapter 2 introduces you to slices in Go. Slices provide a flexible way to work with collections of data, offering capabilities such as dynamic resizing and efficient memory handling.
 
 We start by understanding what slices are and how they differ from arrays, followed by exploring the syntax for creating and initializing slices in Go:
-```
+```go
 numbers := []int{1, 2, 3, 4, 5}
 ```
 This snippet demonstrates a slice of integers, initialized with values. Slices, unlike arrays, do not require a fixed size, making them ideal for scenarios where the number of elements may change.
 
 You'll also learn about key slice operations, including appending elements and slicing existing slices:
-```
+```go
 numbers = append(numbers, 6)
 sliced := numbers[1:4]
 ```
@@ -49,7 +49,7 @@ In this example, we append a new element to our slice and then create a subset u
 Chapter 3 dives into maps, a powerful data structure in Go used to store collections of key-value pairs, offering fast lookups and efficient data organization.
 
 We begin with the basics of map syntax, covering the steps to create and initialize maps:
-```
+```go
 ages := map[string]int{
     "Alice": 25,
     "Bob": 30,
@@ -58,7 +58,7 @@ ages := map[string]int{
 This snippet shows a map where names are used as keys to store age values. Maps allow rapid access to data based on unique keys, making them ideal for tasks requiring quick lookups.
 
 You'll also learn essential operations like adding, updating, and deleting elements within a map:
-```
+```go
 ages["Charlie"] = 35
 delete(ages, "Alice")
 ```
@@ -67,7 +67,7 @@ In this example, we add a new entry to the map and then remove an existing entry
 Chapter 4 introduces structs, which allow us to group data fields together into a single type. Structs are essential for modeling real-world entities in Go, and we'll use a Person struct as our example.
 
 We start by defining a simple ```Person``` struct:
-```
+```go
 type Person struct {
     FirstName string
     LastName  string
@@ -77,7 +77,7 @@ type Person struct {
 This struct defines a Person with a first name, last name, and age. Structs enable us to combine related data into cohesive units.
 
 You’ll also learn how to create instances of structs and access their fields:
-```
+```go
 person := Person{
     FirstName: "Alice",
     LastName: "Smith",
@@ -91,7 +91,7 @@ In this example, we initialize a Person and access the FirstName field. By the e
 Chapter 5 introduces interfaces, which allow us to define behavior in Go that can be implemented by different types. Interfaces are crucial for writing modular and testable code.
 
 We start by defining a simple interface:
-```
+```go
 type Speaker interface {
     Speak() string
 }
@@ -99,7 +99,7 @@ type Speaker interface {
 This interface requires a Speak method that returns a string. Any type implementing Speak can be considered a Speaker.
 
 Next, we implement this interface in a struct:
-```
+```go
 type Person struct {
     Name string
 }
@@ -115,7 +115,7 @@ By the end of this chapter, you'll understand how to use interfaces to design ad
 In this chapter, we culminate our journey by building a checkers game, applying all the concepts you've learned in this course. This project combines Go’s data structures, interfaces, and functions to create a playable game.
 
 We start by setting up the game board using slices and defining the ```Piece``` and ```Player``` structs:
-```
+```go
 type Piece struct {
     Color string
     Position Position
@@ -128,7 +128,7 @@ func NewPiece(color string, pos Position) *Piece {
 This example initializes pieces with a color and position, forming the foundation of the game’s mechanics.
 
 We then implement movement and game rules, creating functions that validate moves and update the game state. Each piece’s behavior and interactions with other pieces bring the game to life:
-```
+```go
 func (p *Piece) Move(newPos Position) error {
     // Logic for checking valid moves and updating position
     return nil
