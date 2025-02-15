@@ -135,11 +135,13 @@ func (b *Board) IsValidMove(move Move) (bool, string) {
 	}
 
 	if piece.Type == Normal {
+		// For Black pieces, forward means moving down (increasing Y).
 		if piece.Color == Black && dy <= 0 {
-			return false, "Normal Black pieces can only move forward"
+			return false, "Normal black pieces can only move down"
 		}
+		// For Red pieces, forward means moving up (decreasing Y).
 		if piece.Color == Red && dy >= 0 {
-			return false, "Normal Red pieces can only move forward"
+			return false, "Normal red pieces can only move up"
 		}
 	}
 
