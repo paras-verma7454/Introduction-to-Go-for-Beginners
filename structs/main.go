@@ -20,17 +20,16 @@ func UpdateNameByReference(p *Person, name string) {
 func MakePersonEmployed(p *Person) {
 	p.Employed = true
 }
-func NewPerson(name string, age int, employed bool) Person {
+func NewPerson(name string, age int) Person {
 	return Person{
 		Name: name,
 		Age: age,
-		Employed: employed,
 	}
 }
 
 // Where we will run our code
 func main() {
-	Person1 := NewPerson("John", 25, false)
+	Person1 := NewPerson("John", 25)
 	fmt.Println(Person1)
 	fmt.Println(UpdateNameByValue(Person1,"Jane"))
 	UpdateNameByReference(&Person1, "Jony")
