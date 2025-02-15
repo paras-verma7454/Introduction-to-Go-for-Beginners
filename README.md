@@ -1,5 +1,6 @@
 # Introduction to Go for Beginners
 
+![image](https://github.com/user-attachments/assets/5e326b30-71ab-4054-bb45-908afe77bb7b)
 
 ## Chapter 1: Getting Started with Go
 
@@ -21,7 +22,7 @@ You'll also learn how to declare and initialize variables, a key part of working
 
 ```
 var name string = "Go Programming"
-var version = 1.17
+var version = 1.24
 ```
 This example shows basic variable declarations, using both explicit and inferred types, which will be useful as you progress through the course.
 
