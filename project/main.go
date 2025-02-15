@@ -136,10 +136,10 @@ func (b *Board) IsValidMove(move Move) (bool, string) {
 
 	if piece.Type == Normal {
 		if piece.Color == Black && dy <= 0 {
-			return false, "Normal Black pieces can only move down"
+			return false, "Normal Black pieces can only move forward"
 		}
 		if piece.Color == Red && dy >= 0 {
-			return false, "Normal Red pieces can only move up"
+			return false, "Normal Red pieces can only move forward"
 		}
 	}
 
@@ -248,8 +248,8 @@ func GameLoop(board *Board) {
 		numbers := make([]int, 4)
 		valid := true
 
-		for i, coords := range coords {
-			num, err := strconv.Atoi(coords)
+		for i, coord := range coords {
+			num, err := strconv.Atoi(coord)
 			if err != nil || num < 0 || num > 7 {
 				fmt.Println("Invalid input Please enter numbers between 0 and 7")
 				valid = false
