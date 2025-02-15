@@ -8,9 +8,9 @@ type Person struct {
 	Employed 	bool
 }
 // We will be modifying this later
-func UpdateNameByValue(Person Person, name string) Person{
-	Person.Name = name
-	return Person
+func UpdateNameByValue(person Person, name string) Person{
+	person.Name = name
+	return person
 }
 
 func UpdateNameByReference(Person *Person, name string) {
